@@ -11,7 +11,8 @@ Rectangle::Rectangle(const point &a,const point &b){
     a[2] =point(x1,y);
     a[3] =point(x,y1);
     a[4] =point(x1,y1);
-    pointarray p(a,4);
+    pointarray x(a,4);
+    p = x;
     this->tam++;
 
 }
@@ -21,7 +22,8 @@ Rectangle::Rectangle(int x, int y, int x1, int y1){
     a[2] =point(x1,y);
     a[3] =point(x,y1);
     a[4] =point(x1,y1);
-    pointarray p(a,4);
+    pointarray x(a,4);
+    p = x;
     this->tam++;
 }
 double Rectangle::area(){
