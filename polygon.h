@@ -2,9 +2,10 @@
 #define POLYGON_H_INCLUDED
 #include "pointarray.h"
 class polygon{
-public:
+protected:
     pointarray p;
     int tam;
+public:
     polygon(pointarray &x);
     polygon();
     polygon(point x[],int sizze);
