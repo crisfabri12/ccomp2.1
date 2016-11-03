@@ -1,15 +1,17 @@
 #ifndef POLYGON_H_INCLUDED
 #define POLYGON_H_INCLUDED
+#include "pointarray.h"
 class polygon{
-private:
-    pointarray p;
-    const int i;
 public:
-    polygon(pointarray &x,int sizze);
+    pointarray p;
+    int tam;
+    polygon(pointarray &x);
+    polygon();
+    polygon(point x[],int sizze);
     double area();
-    static int numpol();
+    int numpol();
     int numsizz();
-    const point getpoint() const;
+    const point * getpoint();
 };
 
 
