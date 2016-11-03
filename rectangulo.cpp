@@ -1,12 +1,27 @@
 #include "rectangulo.h"
 #include "geometry.cpp"
 
-Rectangle::Rectangle(const point &a,const point &b):polygon((updateConstructorPoints(a,point(a.getx(),b.gety()),point(b.getx(),a.gety()),b)),4){
+Rectangle::Rectangle(const point &a,const point &b){
+    point a=new point[4];
+    x = a.getx();
+    y = a.gety();
+    x1=b.getx();
+    y1=b.gety();
+    a[1] =point(x,y);
+    a[2] =point(x1,y);
+    a[3] =point(x,y1);
+    a[4] =point(x1,y1);
+    pointarray p(a,4);
     this->tam++;
 
 }
-Rectangle::Rectangle(int x1, int y1, int x2, int y2):polygon(updateConstructorPoints(point(x1,y1),point(x1,y2),point(x2,y2),point(x2,y1)),4) {
-
+Rectangle::Rectangle(int x, int y, int x1, int y1){
+    point a=new point[4];
+    a[1] =point(x,y);
+    a[2] =point(x1,y);
+    a[3] =point(x,y1);
+    a[4] =point(x1,y1);
+    pointarray p(a,4);
     this->tam++;
 }
 double Rectangle::area(){
