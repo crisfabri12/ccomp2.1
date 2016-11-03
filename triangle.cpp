@@ -4,7 +4,8 @@ triangle::triangle(point &a,point &b,point &c){
     a[1] = a;
     a[2] = b;
     a[3] = c;  
-    this->p(a,3)
+    pointarray x(a,3);
+    p = x;
     this->tam++;
 
 }
