@@ -1,5 +1,9 @@
 #include "triangulo.h
-triangle::triangle(point &a,point &b,point &c):polygon(updateConstructorPoints(a,b,c),3){
+triangle::triangle(point &a,point &b,point &c){
+    point a=new point[3];
+    a[1] = a;
+    a[2] = b;
+    a[3] = c;  
     this->tam++;
 
 }
